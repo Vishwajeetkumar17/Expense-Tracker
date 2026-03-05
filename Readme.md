@@ -129,29 +129,6 @@ Travel,Taxi,200,2026-03-04
 
 # 📁 Project Structure
 
----
-
-# 🛠️ Tech Stack
-
-## Backend
-- ASP.NET Core MVC
-- C#
-- Entity Framework Core
-- LINQ
-
-## Frontend
-- Razor Views
-- Bootstrap 5
-- Chart.js
-- Custom CSS
-
-## Database
-- SQL Server
-
----
-
-# 📁 Project Structure
-
 ```text
 ExpenseTrackerUI
 │
