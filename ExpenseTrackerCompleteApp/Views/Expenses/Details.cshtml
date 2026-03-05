@@ -1,0 +1,54 @@
+@model ExpenseTracker.Models.Expense
+@{
+    ViewData["Title"] = "Expense Details";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="mb-0">Expense Details</h2>
+
+            <a asp-controller="Expenses"
+               asp-action="Index"
+               class="btn"
+               style="background: linear-gradient(90deg,#6c757d,#495057);
+                  color:white;
+                  border-radius:8px;
+                  padding:8px 18px;">
+                ← Back to Dashboard
+            </a>
+        </div>
+
+        <div class="card shadow-sm" style="border-radius:12px;">
+            <div class="card-body">
+
+                <ul class="list-group mb-3">
+                    <li class="list-group-item">
+                        <strong>Description:</strong> @Model.Description
+                    </li>
+
+                    <li class="list-group-item">
+                        <strong>Category:</strong> @Model.Category?.Name
+                    </li>
+
+                    <li class="list-group-item">
+                        <strong>Amount:</strong> @Model.Amount
+                    </li>
+
+                    <li class="list-group-item">
+                        <strong>Date:</strong> @Model.Date.ToShortDateString()
+                    </li>
+                </ul>
+
+                <a asp-controller="Expenses"
+                   asp-action="Edit"
+                   asp-route-id="@Model.Id"
+                   class="btn btn-warning w-100"
+                   style="border-radius:8px;">
+                    Edit Expense
+                </a>
+
+            </div>
+        </div>
+    </div>
+</div>

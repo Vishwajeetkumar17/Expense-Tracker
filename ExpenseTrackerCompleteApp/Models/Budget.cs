@@ -1,0 +1,11 @@
+﻿namespace ExpenseTracker.Models
+{
+    public class Budget
+    {
+        public int Id { get; set; }
+        public int UserId { get; set; }
+        public decimal MonthlyBudget { get; set; }
+        public DateTime Month { get; set; }
+        public User User { get; set; }
+    }
+}

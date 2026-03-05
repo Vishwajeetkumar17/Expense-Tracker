@@ -1,0 +1,54 @@
+@model ExpenseTracker.DTOs.ExpenseCreateDto
+@{
+    ViewData["Title"] = "Add Expense";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2>Add Expense</h2>
+
+            <a asp-controller="Expenses" asp-action="Index" class="btn btn-secondary">
+                ← Back to Dashboard
+            </a>
+        </div>
+
+        <form asp-action="Create" asp-controller="Expenses" method="post" class="card card-body shadow-sm">
+
+            <div class="mb-3">
+                <label asp-for="Description" class="form-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Amount" class="form-label"></label>
+                <input asp-for="Amount" type="number" step="0.01" class="form-control" />
+                <span asp-validation-for="Amount" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Date" class="form-label"></label>
+                <input asp-for="Date" type="date" class="form-control" />
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="CategoryId" class="form-label">Category</label>
+                <select asp-for="CategoryId" class="form-control">
+                    <option value="">-- Select Category --</option>
+                    @foreach (var category in ViewBag.Categories)
+                    {
+                        <option value="@category.Id">@category.Name</option>
+                    }
+                </select>
+                <span asp-validation-for="CategoryId" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-success w-100">
+                Add
+            </button>
+
+        </form>
+    </div>
+</div>

@@ -1,0 +1,123 @@
+body {
+    background: #f5f7fb;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+    padding-top: 120px;
+}
+
+.container {
+    max-width: 1100px;
+}
+
+.navbar {
+    background: linear-gradient(90deg, #1e3c72, #2a5298);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    color: #ffffff !important;
+    transition: 0.3s ease;
+}
+
+.nav-link:hover {
+    opacity: 0.8;
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.card-body {
+    padding: 30px;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #4facfe, #00f2fe);
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+}
+
+.btn-danger {
+    border-radius: 8px;
+}
+
+.btn-warning {
+    border-radius: 8px;
+}
+
+.btn-info {
+    border-radius: 8px;
+}
+
+.form-control {
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+}
+
+.table {
+    border-radius: 12px;
+    overflow: hidden;
+    background: white;
+}
+
+.table thead {
+    background: linear-gradient(90deg, #1e3c72, #2a5298);
+    color: white;
+}
+
+.table tbody tr {
+    transition: 0.2s ease;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f5ff;
+}
+
+.footer {
+    background: #ffffff;
+    border-top: 1px solid #eaeaea;
+    font-size: 14px;
+}
+
+h2 {
+    font-weight: 600;
+    color: #1e3c72;
+}
+
+.dashboard-card {
+    border-radius: 14px;
+    transition: 0.25s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.stat-card {
+    border-radius: 14px;
+    transition: 0.3s;
+}
+
+    .stat-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+    }

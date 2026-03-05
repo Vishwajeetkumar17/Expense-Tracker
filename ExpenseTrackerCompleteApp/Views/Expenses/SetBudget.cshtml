@@ -1,0 +1,49 @@
+﻿@model ExpenseTracker.Models.Budget
+
+@{
+    ViewData["Title"] = "Set Monthly Budget";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="mb-0">Set Monthly Budget</h2>
+
+            <a asp-controller="Expenses"
+               asp-action="Index"
+               class="btn"
+               style="background: linear-gradient(90deg,#6c757d,#495057);
+                  color:white;
+                  border-radius:8px;
+                  padding:8px 18px;">
+                ← Back to Dashboard
+            </a>
+        </div>
+
+        <form asp-action="SetBudget"
+              method="post"
+              class="card card-body shadow-sm"
+              style="border-radius:12px;">
+
+            <div class="mb-3">
+                <label class="form-label">Monthly Budget</label>
+
+                <input type="number"
+                       name="monthlyBudget"
+                       step="0.01"
+                       class="form-control"
+                       style="border-radius:8px;"
+                       value="@(Model?.MonthlyBudget ?? 0)"
+                       required />
+            </div>
+
+            <button type="submit"
+                    class="btn btn-warning w-100"
+                    style="border-radius:8px;">
+                Save Budget
+            </button>
+
+        </form>
+
+    </div>
+</div>
