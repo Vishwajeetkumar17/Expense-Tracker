@@ -25,8 +25,6 @@ This project demonstrates **real-world full stack development concepts** includi
 ### Expense Management
 ![Expense Screenshot](screenshots/expenses.png)
 
-*(You can replace these images with actual screenshots later.)*
-
 ---
 
 # 🚀 Features

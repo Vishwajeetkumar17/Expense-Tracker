@@ -22,32 +22,32 @@
 
             <a asp-controller="Expenses" asp-action="Create"
                class="btn btn-primary shadow-sm">
-                ➕ Add Expense
+                Add Expense
             </a>
 
             <a asp-controller="Expenses" asp-action="Analytics"
                class="btn btn-outline-success shadow-sm">
-                📊 Analytics
+                Analytics
             </a>
 
             <a asp-controller="Categories" asp-action="Index"
                class="btn btn-outline-dark shadow-sm">
-                📁 Categories
+                Categories
             </a>
 
             <a asp-controller="Expenses" asp-action="SetBudget"
                class="btn btn-outline-warning shadow-sm">
-                💰 Budget
+                Budget
             </a>
 
             <a asp-controller="Expenses" asp-action="ExportCsv"
                class="btn btn-outline-secondary shadow-sm">
-                ⬇ Export
+                Export
             </a>
 
             <form asp-controller="Auth" asp-action="Logout" method="post">
                 <button class="btn btn-outline-danger shadow-sm">
-                    🚪 Logout
+                    Logout
                 </button>
             </form>
 
@@ -105,7 +105,7 @@
 
         <div class="card-body">
 
-            <h5 class="mb-3">💰 Monthly Budget</h5>
+            <h5 class="mb-3">Monthly Budget</h5>
 
             <p>
                 Budget: ₹ <strong>@ViewBag.Budget</strong> |
@@ -129,7 +129,7 @@
             @if (Convert.ToDouble(ViewBag.BudgetPercent) > 85)
             {
                 <div class="alert alert-danger mt-3">
-                    ⚠ Budget warning! You have used @ViewBag.BudgetPercent% of your budget.
+                    Budget warning! You have used @ViewBag.BudgetPercent% of your budget.
                 </div>
             }
 
@@ -147,7 +147,7 @@
 
                     <div class="card-body">
 
-                        <h6>📊 Top Category</h6>
+                        <h6>Top Category</h6>
 
                         <h4 class="fw-bold">
                             @ViewBag.TopCategory
@@ -169,7 +169,7 @@
 
                     <div class="card-body">
 
-                        <h6>💳 Total Transactions</h6>
+                        <h6>Total Transactions</h6>
 
                         <h3 class="fw-bold">
                             @ViewBag.TotalTransactions
@@ -187,7 +187,7 @@
 
                     <div class="card-body">
 
-                        <h6>📉 Average Expense</h6>
+                        <h6>Average Expense</h6>
 
                         <h3 class="fw-bold">
                             ₹ @ViewBag.AverageExpense
@@ -207,7 +207,7 @@
 
         <div class="card-body">
 
-            <h5 class="mb-3">🕒 Recent Activity</h5>
+            <h5 class="mb-3">Recent Activity</h5>
 
             <ul class="list-group list-group-flush small">
 
@@ -291,23 +291,15 @@
                                 <button type="submit"
                                         class="btn btn-sm btn-danger"
                                         onclick="return confirm('Are you sure?');">
-
                                     Delete
-
                                 </button>
-
                             </form>
-
                         </div>
-
                     </td>
-
                 </tr>
-
             }
 
         </tbody>
-
     </table>
 
 
@@ -351,9 +343,6 @@
                     </a>
                 </li>
             }
-
         </ul>
-
     </nav>
-
 </div>
